@@ -1,0 +1,45 @@
+First Week Reflections on SQL
+
+DDL vs DML
+In SQL, two families of commands shape how we interact with data: Data Definition Language (DDL) and Data Manipulation Language (DML).
+
+DDL commands (CREATE, ALTER, DROP) are like the architect’s blueprint, they define the structure of the database.
+DML commands (INSERT, UPDATE, DELETE, SELECT) are the everyday tools. They let us add, change, or remove the actual records inside those structures. Here is how I tackled the first assignment:
+CREATE built the schema nairobi_academy and three tables (students, subjects, exam_results).
+ 
+
+INSERT populated each table with 10 rows of realistic data.
+ 
+
+UPDATE corrected mistakes: Esther Akinyi’s city changed from Nakuru to Nairobi, and marks for result_id 5 were fixed from 49 to 59.
+ 
+
+DELETE removed the cancelled exam result with result_id 9.
+ 
+
+Filtering with WHERE
+The WHERE clause is the gatekeeper of SQL. Without it, every row would be affected — a dangerous mistake!
+
+I used it to:
+_- Find students in Form 4 (WHERE class = 'Form 4').
+
+Retrieve exam results with marks >= 70.
+Combine conditions (WHERE class = 'Form 3' AND city = 'Nairobi').
+Explore operators like:
+BETWEEN for ranges (marks between 50 and 80).
+IN for multiple matches (cities in Nairobi, Mombasa, Kisumu).
+LIKE for patterns (names starting with A or E). _
+It’s the precision tool that makes queries powerful and safe.
+
+ 
+
+CASE WHEN: Transforming Data
+Raw numbers are useful, but categories tell stories. With CASE WHEN, I transformed exam marks into performance labels: Distinction, Merit, Pass, or Fail.
+
+ 
+
+I also classified students as Senior (Form 3 or 4) or Junior (Form 1 or 2).
+
+ 
+
+The most challenging part was remembering to always pair UPDATE and DELETE with WHERE. Forgetting it could wipe out entire tables in seconds. The most interesting part was experimenting with CASE WHEN. It was like giving the database a voice: instead of just numbers, it could tell me who excelled, who struggled, and who was senior or junior. This week, I realized that the beauty of SQL lies in precision and creativity.
